@@ -1,0 +1,62 @@
+#cabecera{
+  background: #5b7989;
+  border-radius: 10px 10px 0px 0px;
+  display: inline-block;
+  width: 100%;
+  color: white;
+  margin:0px;
+  padding: 0px;
+}
+
+#cabecera h1{
+  float:left;
+  text-shadow: 2px 2px #02010a;
+  padding: 10px;
+}
+
+#cabecera #menu{
+  float: right;
+}
+
+#cabecera #menu ul{
+  list-style-type: none;
+}
+
+#cabecera ul li{
+  display: inline-block;
+  padding: 10px;
+}
+
+#cabecera ul li a{
+  color: white;
+
+}
+
+#cabecera ul li a:visited{
+  text-decoration: none;
+}
+
+#img_center{
+  background: #82c3a6;
+  text-align: center;
+  padding: 5px;
+  margin: 0px;
+}
+
+#img_center img{
+  width: 80%;
+  height: 450px;
+}
+
+#img_second{
+  display: flex;
+}
+
+#img_second figure{
+  flex-direction: column;
+
+}
+.figure{
+  width: 150;
+  height: auto;
+}
