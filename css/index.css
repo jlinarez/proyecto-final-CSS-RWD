@@ -1,62 +1,109 @@
+body{
+  background: #02010a;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.2em;
+}
+
 #cabecera{
   background: #5b7989;
   border-radius: 10px 10px 0px 0px;
-  display: inline-block;
-  width: 100%;
+  display: flex;
   color: white;
   margin:0px;
-  padding: 0px;
+  padding: 10px;
 }
 
 #cabecera h1{
-  float:left;
+  flex-direction: column;
   text-shadow: 2px 2px #02010a;
+}
+
+#menu{
+  flex-direction: column;
+  margin-left: auto;
   padding: 10px;
 }
 
-#cabecera #menu{
-  float: right;
-}
-
-#cabecera #menu ul{
+#menu ul{
   list-style-type: none;
 }
 
-#cabecera ul li{
+#menu ul li{
   display: inline-block;
   padding: 10px;
 }
 
-#cabecera ul li a{
+#menu ul li a{
   color: white;
-
 }
 
-#cabecera ul li a:visited{
+#menu ul li:first-child a{
   text-decoration: none;
 }
 
+
+
 #img_center{
   background: #82c3a6;
-  text-align: center;
-  padding: 5px;
+  padding: 10px;
   margin: 0px;
 }
 
 #img_center img{
-  width: 80%;
+  width: 1250px;
   height: 450px;
+  border: 1px solid black;
+  display:block;
+  margin: auto;
 }
 
 #img_second{
   display: flex;
+  background: #d5c75f;
+  justify-content: center;
 }
 
-#img_second figure{
+#img_second .figure{
   flex-direction: column;
-
+  text-align: center;
 }
-.figure{
-  width: 150;
-  height: auto;
+.figure img{
+  width: 550px;
+  height: 400px;
+  border: 1px solid black
+}
+
+#img_second #fig1 img:hover{
+  -webkit-transform: rotate(10deg);
+}
+
+#img_second #fig2 img:hover{
+  -webkit-transform: translate(20px, -5px);
+  box-shadow: 2px 2px #82c3a6;
+  border: 2px solid black;
+}
+
+
+footer{
+  background: #C6d5c5;
+  border-radius: 0px 0px 10px 10px;
+  display: flex;
+  justify-content: center;
+  width: 100%
+}
+
+footer div{
+  flex-direction: column;
+  margin: 2px 20px;
+  padding: 2px 20px;
+}
+
+footer div h2{
+  margin: 0px;
+  padding: 0px;
+}
+
+footer #networking{
+  display: flex;
+  flex-direction: column;
 }
