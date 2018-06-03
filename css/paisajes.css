@@ -8,24 +8,28 @@ img{
   box-shadow: 2px 2px 2px #02010a;
 }
 
+#contenido{
+  max-width: 900px;
+  margin: auto;
+}
+
 #cabecera{
   background: #5b7989;
   border-radius: 10px 10px 0px 0px;
   display: flex;
+  flex-direction: row;
   color: white;
   margin:0px;
   padding: 10px;
+  animation: slidin 2s;
 }
 
 #cabecera h1{
-  flex-direction: column;
   text-shadow: 2px 2px #02010a;
 }
 
 #menu{
-  flex-direction: column;
-  margin-left: auto;
-  padding: 10px;
+ margin-left: auto;
 }
 
 #menu ul{
@@ -47,16 +51,21 @@ img{
 
 #galeria{
   background: #d5c75f;
+  padding: 1%;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
 }
 
 #galeria img{
   width: 30%;
+  height: 15%;
   border: 2px solid black;
   box-shadow: 2px 2px 2px #02010a;
-  margin: 20px;
+  margin-top: 1%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1%;
+  padding: 0px;
 }
 
 #galeria img:first-child{
@@ -76,14 +85,15 @@ footer{
   background: #C6d5c5;
   border-radius: 0px 0px 10px 10px;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   width: 100%
 }
 
 footer div{
-  flex-direction: column;
-  margin: 2px 20px;
-  padding: 2px 20px;
+
+  margin: 2px 5px;
+  padding: 2px 10px;
 }
 
 footer div h2{
@@ -94,4 +104,45 @@ footer div h2{
 footer #networking{
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width: 420px){
+  #contenido{
+    width: 100%;
+  }
+
+  #cabecera{
+    -webkit-flex-direction: column;
+    text-align: center;
+    padding: 0px;
+  }
+
+  #menu{
+    margin: auto;
+    padding: 0px;
+  }
+
+  #galeria{
+    -webkit-flex-flow: column nowrap;
+    text-align: center;
+  }
+  #galeria img{
+    width: 100%;
+  }
+
+  footer{
+    -webkit-flex-direction: column;
+  }
+}
+
+@-webkit-keyframes slidin{
+  0%{
+    margin-top: 150%;
+  }
+  60%{
+    margin-top: -5%;
+  }
+  100%{
+    margin-top: 0%;
+  }
 }
